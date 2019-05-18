@@ -26,6 +26,10 @@ export class TableBasicComponent {
   dataSource = ELEMENT_DATA;
 }
 
+function TestCallback() {
+  console.log('i love one piece');
+}
+
 export interface PeriodicElementView {
   name: string;
   position: number;
@@ -33,6 +37,7 @@ export interface PeriodicElementView {
   symbol: {
     label: string;
     href: string;
+    callback?: Function;
   };
 }
 
@@ -43,7 +48,8 @@ const ELEMENT_DATA: PeriodicElementView[] = [
     weight: 1.0079,
     symbol: {
       label: 'H',
-      href: 'https://en.wikipedia.org/wiki/Hydrogen'
+      href: 'https://en.wikipedia.org/wiki/Hydrogen',
+      callback: TestCallback
     }
   },
   {
