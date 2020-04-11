@@ -23,7 +23,7 @@ export class TableBasicComponent {
     }
   ];
   displayedColumns = this.columnsDef.map(item => item.id);
-  dataSource = ELEMENT_DATA;
+  dataSource = DATA_SOURCE;
 }
 
 function TestCallback() {
@@ -41,7 +41,7 @@ export interface PeriodicElementView {
   };
 }
 
-const ELEMENT_DATA: PeriodicElementView[] = [
+const DATA_SOURCE: PeriodicElementView[] = [
   {
     position: 1,
     name: 'Hydrogen',
